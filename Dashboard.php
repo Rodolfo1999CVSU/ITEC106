@@ -8,4 +8,18 @@ class Dashboard extends BaseController
     {
         return view('view_dashboard');
     }
+
+    public function users()
+    {
+        return view('Users');
+    }
+
+    public function getUsers()
+    {
+        $Users = 75;
+        $array = [
+            'Users Registration' => $Users,
+        ];
+        return $this->response->setJSON($array);
+    }
 }
